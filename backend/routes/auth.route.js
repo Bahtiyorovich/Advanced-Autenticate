@@ -9,6 +9,6 @@ router.post('/login', authController.login)
 router.post('/logout', authController.logout)
 router.get('/activation/:id', authController.activation)
 router.get('/refresh', authController.refresh)
-router.get('/get-users', authMiddleware, authController.getUsers)
+router.get('/users', authMiddleware, authController.getUsers)
 
 export default router;

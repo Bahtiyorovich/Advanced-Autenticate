@@ -56,7 +56,6 @@ class AuthService {
     }
 
     const userPayload = Token.validateRefreshToken(refreshToken)
-    console.log('userPayload: ',userPayload)
     const tokenDB = await Token.findToken(refreshToken)
 
     if(!userPayload || !tokenDB) throw BaseError.UnauthorizedError('Bad authorization')
